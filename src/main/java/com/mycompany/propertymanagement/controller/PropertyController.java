@@ -10,6 +10,6 @@ public class PropertyController {
 
     @GetMapping("/hello")
     public String sayHi(){
-        return "Welcome to property dealers";
+        return "First Git commit after long time";
     }
 }
