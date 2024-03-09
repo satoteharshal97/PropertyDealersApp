@@ -1,15 +1,20 @@
 package com.mycompany.propertymanagement.controller;
 
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.mycompany.propertymanagement.model.PropertyDTO;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/api/v1/properties")
+@RequestMapping("/api/v1/")
 public class PropertyController {
-
     @GetMapping("/hello")
     public String sayHi(){
         return "First Git commit after long time";
     }
+
+    @PostMapping("/save")
+    public PropertyDTO saveProperty(@RequestBody PropertyDTO propertyDTO) {
+        System.out.println(propertyDTO);
+        return propertyDTO;
+    }
+
 }
